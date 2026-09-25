@@ -222,7 +222,7 @@ namespace ReadGuardCommands
 
 			if (bExitWhenDone)
 			{
-				FPlatformMisc::RequestExitWithStatus(/*Force=*/false, 2, TEXT("ReadGuard.Gate"));
+				FPlatformMisc::RequestExitWithStatus(/*Force=*/true, 2, TEXT("ReadGuard.Gate"));
 			}
 			return;
 		}

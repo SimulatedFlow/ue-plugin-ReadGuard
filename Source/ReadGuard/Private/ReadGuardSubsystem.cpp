@@ -407,7 +407,7 @@ void UReadGuardSubsystem::FinalizeRun()
 	// A report that could not be written is a gate that did not run, and a gate that did not run must never
 	// be allowed to look like a gate that passed.
 	const uint8 Status = bWritten ? static_cast<uint8>(ExitCode) : 2;
-	FPlatformMisc::RequestExitWithStatus(/*Force=*/false, Status, TEXT("ReadGuard.Gate"));
+	FPlatformMisc::RequestExitWithStatus(/*Force=*/true, Status, TEXT("ReadGuard.Gate"));
 }
 
 void UReadGuardSubsystem::BeginGate(const FString& Path, const bool bExitWhenDone)
